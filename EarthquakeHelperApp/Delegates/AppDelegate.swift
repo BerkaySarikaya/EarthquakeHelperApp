@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.main.bounds)
         // In your AppDelegate or wherever you initialize view controllers
-
+        
+        GMSServices.provideAPIKey("AIzaSyBjyDP0BF-QXT4Dm2oa0oNMrn25Zwgnzqk")
         let openingScreenVC = OpeningScreenViewController()
         let navigationController = UINavigationController(rootViewController: openingScreenVC)
 

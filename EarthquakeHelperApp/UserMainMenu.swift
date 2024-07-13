@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class UserMainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -60,9 +61,17 @@ class UserMainMenuViewController: UIViewController, UITableViewDataSource, UITab
             emptyViewController.view.backgroundColor = .yellow
             navigationController?.pushViewController(emptyViewController, animated: true)
         case 2:
-            let emptyViewController = UIViewController()
-            emptyViewController.view.backgroundColor = .green
-            navigationController?.pushViewController(emptyViewController, animated: true)
+            let mapViewController = UIViewController()
+            mapViewController.loadViewIfNeeded()
+            let camera = GMSCameraPosition(latitude: 38.334856324598526, longitude: 38.274563209679954, zoom: 16.0)
+            let mapView = GMSMapView.map(withFrame: mapViewController.view.bounds, camera: camera)
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: 38.334856324598526, longitude: 38.274563209679954)
+            marker.title = "Fahri Kayahan Konteyner Kent"
+            marker.snippet = "Malatya"
+            marker.map = mapView
+            mapViewController.view.addSubview(mapView)
+            navigationController?.pushViewController(mapViewController, animated: true)
         default:
             break
         }

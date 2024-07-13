@@ -19,6 +19,7 @@
 		CD0F25CC2BDD1603009C8540 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CD0F25CB2BDD1603009C8540 /* FirebaseMessaging */; };
 		CD0F25CE2BDD1603009C8540 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD0F25CD2BDD1603009C8540 /* FirebaseRemoteConfigSwift */; };
 		CD0F25D02BDD1603009C8540 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CD0F25CF2BDD1603009C8540 /* FirebaseStorage */; };
+		CD197F8E2C42A26C00B8CB6D /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = CD197F8D2C42A26C00B8CB6D /* GoogleMaps */; };
 		CD2BFE822B530BAA004B4A06 /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2BFE812B530BAA004B4A06 /* TestEnvironment.swift */; };
 		CD4973F92B53541000E495A9 /* NavigationControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4973F82B53541000E495A9 /* NavigationControllerTest.swift */; };
 		CD729C2B2BADB2830019346E /* OpeningScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD729C2A2BADB2830019346E /* OpeningScreen.swift */; };
@@ -68,6 +69,7 @@
 				CD0F25BC2BDD1603009C8540 /* FirebaseAnalytics in Frameworks */,
 				CD0F25BE2BDD1603009C8540 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				CD0F25CE2BDD1603009C8540 /* FirebaseRemoteConfigSwift in Frameworks */,
+				CD197F8E2C42A26C00B8CB6D /* GoogleMaps in Frameworks */,
 				CD0F25D02BDD1603009C8540 /* FirebaseStorage in Frameworks */,
 				CD0F25C22BDD1603009C8540 /* FirebaseAuth in Frameworks */,
 				CD0F25C62BDD1603009C8540 /* FirebaseFirestoreSwift in Frameworks */,
@@ -168,6 +170,7 @@
 				CD0F25CB2BDD1603009C8540 /* FirebaseMessaging */,
 				CD0F25CD2BDD1603009C8540 /* FirebaseRemoteConfigSwift */,
 				CD0F25CF2BDD1603009C8540 /* FirebaseStorage */,
+				CD197F8D2C42A26C00B8CB6D /* GoogleMaps */,
 			);
 			productName = EarthquakeHelperApp;
 			productReference = CD9648FD2B52CBC900D93A4B /* EarthquakeHelperApp.app */;
@@ -199,6 +202,7 @@
 			mainGroup = CD9648F42B52CBC900D93A4B;
 			packageReferences = (
 				CD0F25BA2BDD1603009C8540 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CD197F8C2C42A26C00B8CB6D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 			);
 			productRefGroup = CD9648FE2B52CBC900D93A4B /* Products */;
 			projectDirPath = "";
@@ -471,6 +475,14 @@
 				minimumVersion = 10.24.0;
 			};
 		};
+		CD197F8C2C42A26C00B8CB6D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -528,6 +540,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD0F25BA2BDD1603009C8540 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		CD197F8D2C42A26C00B8CB6D /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD197F8C2C42A26C00B8CB6D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
